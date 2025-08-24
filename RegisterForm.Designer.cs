@@ -86,6 +86,7 @@
             this.register_btn.TabIndex = 18;
             this.register_btn.Text = "REGISTER";
             this.register_btn.UseVisualStyleBackColor = false;
+            this.register_btn.Click += new System.EventHandler(this.register_btn_Click);
             // 
             // register_showPassword
             // 

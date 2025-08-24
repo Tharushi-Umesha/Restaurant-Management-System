@@ -9,3 +9,4 @@ C:\Users\tharushi umesha\source\repos\RestaurantManagementSystem\RestaurantManag
 C:\Users\tharushi umesha\source\repos\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.exe
 C:\Users\tharushi umesha\source\repos\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.pdb
 C:\Users\tharushi umesha\source\repos\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.exe.config
+C:\Users\tharushi umesha\source\repos\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.RegisterForm.resources

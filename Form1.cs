@@ -62,10 +62,16 @@ namespace RestaurantManagementSystem
                     if(table.Rows.Count > 0)
                     {
                         MessageBox.Show("Login Successful", "Information message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MainForm mainForm = new MainForm();
+                        mainForm.Show();
+
+                        this.Hide();
                     }
                     else
                     {
                         MessageBox.Show("Login Unsuccessful Incorrect Credentials", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        
                     }
                 }
             }

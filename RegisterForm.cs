@@ -85,6 +85,11 @@ namespace RestaurantManagementSystem
                             cmd.ExecuteNonQuery();
 
                             MessageBox.Show("Register User Successfully.", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            Form1 loginForm = new Form1();
+                            loginForm.Show();
+
+                            this.Hide();
                         }
                     }
                 }

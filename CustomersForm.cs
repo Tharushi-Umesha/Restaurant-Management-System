@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace RestaurantManagementSystem
 {
-    public partial class DashboardForm : UserControl
+    public partial class CustomersForm : UserControl
     {
-        public DashboardForm()
+        public CustomersForm()
         {
             InitializeComponent();
         }
-
-        
     }
 }

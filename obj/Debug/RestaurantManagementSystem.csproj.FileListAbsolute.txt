@@ -12,3 +12,7 @@ C:\Users\tharushi umesha\source\repos\RestaurantManagementSystem\RestaurantManag
 C:\Users\tharushi umesha\source\repos\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.RegisterForm.resources
 C:\Users\tharushi umesha\source\repos\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.MainForm.resources
 C:\Users\tharushi umesha\source\repos\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.DashboardForm.resources
+C:\Users\tharushi umesha\source\repos\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.ShopForm.resources
+C:\Users\tharushi umesha\source\repos\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.InventoryForm.resources
+C:\Users\tharushi umesha\source\repos\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.CategoryForm.resources
+C:\Users\tharushi umesha\source\repos\RestaurantManagementSystem\RestaurantManagementSystem\obj\Debug\RestaurantManagementSystem.CustomersForm.resources

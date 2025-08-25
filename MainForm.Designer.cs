@@ -33,18 +33,24 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.logout_btn = new System.Windows.Forms.Button();
+            this.customers_btn = new System.Windows.Forms.Button();
+            this.category_btn = new System.Windows.Forms.Button();
+            this.inventory_btn = new System.Windows.Forms.Button();
+            this.shop_btn = new System.Windows.Forms.Button();
+            this.dashboard_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.shop_btn = new System.Windows.Forms.Button();
-            this.dashboard_btn = new System.Windows.Forms.Button();
-            this.category_btn = new System.Windows.Forms.Button();
-            this.inventory_btn = new System.Windows.Forms.Button();
-            this.customers_btn = new System.Windows.Forms.Button();
-            this.logout_btn = new System.Windows.Forms.Button();
+            this.customersForm1 = new RestaurantManagementSystem.CustomersForm();
+            this.categoryForm1 = new RestaurantManagementSystem.CategoryForm();
+            this.inventoryForm1 = new RestaurantManagementSystem.InventoryForm();
+            this.shopForm1 = new RestaurantManagementSystem.ShopForm();
+            this.dashboardForm1 = new RestaurantManagementSystem.DashboardForm();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // close
@@ -99,6 +105,114 @@
             this.panel2.Size = new System.Drawing.Size(257, 719);
             this.panel2.TabIndex = 12;
             // 
+            // logout_btn
+            // 
+            this.logout_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(56)))), ((int)(((byte)(42)))));
+            this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logout_btn.FlatAppearance.BorderSize = 0;
+            this.logout_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
+            this.logout_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
+            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout_btn.ForeColor = System.Drawing.Color.White;
+            this.logout_btn.Location = new System.Drawing.Point(8, 670);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(243, 37);
+            this.logout_btn.TabIndex = 7;
+            this.logout_btn.Text = "Logout";
+            this.logout_btn.UseVisualStyleBackColor = false;
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
+            // 
+            // customers_btn
+            // 
+            this.customers_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(56)))), ((int)(((byte)(42)))));
+            this.customers_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.customers_btn.FlatAppearance.BorderSize = 0;
+            this.customers_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
+            this.customers_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
+            this.customers_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customers_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customers_btn.ForeColor = System.Drawing.Color.White;
+            this.customers_btn.Location = new System.Drawing.Point(8, 448);
+            this.customers_btn.Name = "customers_btn";
+            this.customers_btn.Size = new System.Drawing.Size(243, 37);
+            this.customers_btn.TabIndex = 6;
+            this.customers_btn.Text = "Customers";
+            this.customers_btn.UseVisualStyleBackColor = false;
+            this.customers_btn.Click += new System.EventHandler(this.customers_btn_Click);
+            // 
+            // category_btn
+            // 
+            this.category_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(56)))), ((int)(((byte)(42)))));
+            this.category_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.category_btn.FlatAppearance.BorderSize = 0;
+            this.category_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
+            this.category_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
+            this.category_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.category_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.category_btn.ForeColor = System.Drawing.Color.White;
+            this.category_btn.Location = new System.Drawing.Point(8, 393);
+            this.category_btn.Name = "category_btn";
+            this.category_btn.Size = new System.Drawing.Size(243, 37);
+            this.category_btn.TabIndex = 5;
+            this.category_btn.Text = "Categories";
+            this.category_btn.UseVisualStyleBackColor = false;
+            this.category_btn.Click += new System.EventHandler(this.category_btn_Click);
+            // 
+            // inventory_btn
+            // 
+            this.inventory_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(56)))), ((int)(((byte)(42)))));
+            this.inventory_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.inventory_btn.FlatAppearance.BorderSize = 0;
+            this.inventory_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
+            this.inventory_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
+            this.inventory_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inventory_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventory_btn.ForeColor = System.Drawing.Color.White;
+            this.inventory_btn.Location = new System.Drawing.Point(8, 338);
+            this.inventory_btn.Name = "inventory_btn";
+            this.inventory_btn.Size = new System.Drawing.Size(243, 37);
+            this.inventory_btn.TabIndex = 4;
+            this.inventory_btn.Text = "Inventory";
+            this.inventory_btn.UseVisualStyleBackColor = false;
+            this.inventory_btn.Click += new System.EventHandler(this.inventory_btn_Click);
+            // 
+            // shop_btn
+            // 
+            this.shop_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(56)))), ((int)(((byte)(42)))));
+            this.shop_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.shop_btn.FlatAppearance.BorderSize = 0;
+            this.shop_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
+            this.shop_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
+            this.shop_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shop_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shop_btn.ForeColor = System.Drawing.Color.White;
+            this.shop_btn.Location = new System.Drawing.Point(8, 279);
+            this.shop_btn.Name = "shop_btn";
+            this.shop_btn.Size = new System.Drawing.Size(243, 37);
+            this.shop_btn.TabIndex = 3;
+            this.shop_btn.Text = "Shop";
+            this.shop_btn.UseVisualStyleBackColor = false;
+            this.shop_btn.Click += new System.EventHandler(this.shop_btn_Click);
+            // 
+            // dashboard_btn
+            // 
+            this.dashboard_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(56)))), ((int)(((byte)(42)))));
+            this.dashboard_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dashboard_btn.FlatAppearance.BorderSize = 0;
+            this.dashboard_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
+            this.dashboard_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
+            this.dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashboard_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboard_btn.ForeColor = System.Drawing.Color.White;
+            this.dashboard_btn.Location = new System.Drawing.Point(8, 224);
+            this.dashboard_btn.Name = "dashboard_btn";
+            this.dashboard_btn.Size = new System.Drawing.Size(243, 37);
+            this.dashboard_btn.TabIndex = 2;
+            this.dashboard_btn.Text = "Dashboard";
+            this.dashboard_btn.UseVisualStyleBackColor = false;
+            this.dashboard_btn.Click += new System.EventHandler(this.dashboard_btn_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -122,114 +236,51 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.dashboardForm1);
+            this.panel3.Controls.Add(this.shopForm1);
+            this.panel3.Controls.Add(this.inventoryForm1);
+            this.panel3.Controls.Add(this.categoryForm1);
+            this.panel3.Controls.Add(this.customersForm1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(257, 35);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1082, 719);
             this.panel3.TabIndex = 8;
             // 
-            // shop_btn
+            // customersForm1
             // 
-            this.shop_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(56)))), ((int)(((byte)(42)))));
-            this.shop_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.shop_btn.FlatAppearance.BorderSize = 0;
-            this.shop_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
-            this.shop_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
-            this.shop_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.shop_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shop_btn.ForeColor = System.Drawing.Color.White;
-            this.shop_btn.Location = new System.Drawing.Point(8, 279);
-            this.shop_btn.Name = "shop_btn";
-            this.shop_btn.Size = new System.Drawing.Size(243, 37);
-            this.shop_btn.TabIndex = 3;
-            this.shop_btn.Text = "Shop";
-            this.shop_btn.UseVisualStyleBackColor = false;
+            this.customersForm1.Location = new System.Drawing.Point(0, 0);
+            this.customersForm1.Name = "customersForm1";
+            this.customersForm1.Size = new System.Drawing.Size(1082, 719);
+            this.customersForm1.TabIndex = 0;
             // 
-            // dashboard_btn
+            // categoryForm1
             // 
-            this.dashboard_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(56)))), ((int)(((byte)(42)))));
-            this.dashboard_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dashboard_btn.FlatAppearance.BorderSize = 0;
-            this.dashboard_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
-            this.dashboard_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
-            this.dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dashboard_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboard_btn.ForeColor = System.Drawing.Color.White;
-            this.dashboard_btn.Location = new System.Drawing.Point(8, 224);
-            this.dashboard_btn.Name = "dashboard_btn";
-            this.dashboard_btn.Size = new System.Drawing.Size(243, 37);
-            this.dashboard_btn.TabIndex = 2;
-            this.dashboard_btn.Text = "Dashboard";
-            this.dashboard_btn.UseVisualStyleBackColor = false;
+            this.categoryForm1.Location = new System.Drawing.Point(0, 0);
+            this.categoryForm1.Name = "categoryForm1";
+            this.categoryForm1.Size = new System.Drawing.Size(1082, 719);
+            this.categoryForm1.TabIndex = 1;
             // 
-            // category_btn
+            // inventoryForm1
             // 
-            this.category_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(56)))), ((int)(((byte)(42)))));
-            this.category_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.category_btn.FlatAppearance.BorderSize = 0;
-            this.category_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
-            this.category_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
-            this.category_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.category_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.category_btn.ForeColor = System.Drawing.Color.White;
-            this.category_btn.Location = new System.Drawing.Point(8, 393);
-            this.category_btn.Name = "category_btn";
-            this.category_btn.Size = new System.Drawing.Size(243, 37);
-            this.category_btn.TabIndex = 5;
-            this.category_btn.Text = "Categories";
-            this.category_btn.UseVisualStyleBackColor = false;
+            this.inventoryForm1.Location = new System.Drawing.Point(0, 0);
+            this.inventoryForm1.Name = "inventoryForm1";
+            this.inventoryForm1.Size = new System.Drawing.Size(1082, 719);
+            this.inventoryForm1.TabIndex = 2;
             // 
-            // inventory_btn
+            // shopForm1
             // 
-            this.inventory_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(56)))), ((int)(((byte)(42)))));
-            this.inventory_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.inventory_btn.FlatAppearance.BorderSize = 0;
-            this.inventory_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
-            this.inventory_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
-            this.inventory_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inventory_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventory_btn.ForeColor = System.Drawing.Color.White;
-            this.inventory_btn.Location = new System.Drawing.Point(8, 338);
-            this.inventory_btn.Name = "inventory_btn";
-            this.inventory_btn.Size = new System.Drawing.Size(243, 37);
-            this.inventory_btn.TabIndex = 4;
-            this.inventory_btn.Text = "Inventory";
-            this.inventory_btn.UseVisualStyleBackColor = false;
+            this.shopForm1.Location = new System.Drawing.Point(0, 0);
+            this.shopForm1.Name = "shopForm1";
+            this.shopForm1.Size = new System.Drawing.Size(1082, 719);
+            this.shopForm1.TabIndex = 3;
             // 
-            // customers_btn
+            // dashboardForm1
             // 
-            this.customers_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(56)))), ((int)(((byte)(42)))));
-            this.customers_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.customers_btn.FlatAppearance.BorderSize = 0;
-            this.customers_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
-            this.customers_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
-            this.customers_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customers_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customers_btn.ForeColor = System.Drawing.Color.White;
-            this.customers_btn.Location = new System.Drawing.Point(8, 448);
-            this.customers_btn.Name = "customers_btn";
-            this.customers_btn.Size = new System.Drawing.Size(243, 37);
-            this.customers_btn.TabIndex = 6;
-            this.customers_btn.Text = "Customers";
-            this.customers_btn.UseVisualStyleBackColor = false;
-            // 
-            // logout_btn
-            // 
-            this.logout_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(56)))), ((int)(((byte)(42)))));
-            this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logout_btn.FlatAppearance.BorderSize = 0;
-            this.logout_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
-            this.logout_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(130)))), ((int)(((byte)(98)))));
-            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logout_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logout_btn.ForeColor = System.Drawing.Color.White;
-            this.logout_btn.Location = new System.Drawing.Point(8, 670);
-            this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(243, 37);
-            this.logout_btn.TabIndex = 7;
-            this.logout_btn.Text = "Logout";
-            this.logout_btn.UseVisualStyleBackColor = false;
-            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
+            this.dashboardForm1.Location = new System.Drawing.Point(0, 0);
+            this.dashboardForm1.Name = "dashboardForm1";
+            this.dashboardForm1.Size = new System.Drawing.Size(1082, 719);
+            this.dashboardForm1.TabIndex = 4;
             // 
             // MainForm
             // 
@@ -248,6 +299,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -267,5 +319,10 @@
         private System.Windows.Forms.Button shop_btn;
         private System.Windows.Forms.Button dashboard_btn;
         private System.Windows.Forms.Button logout_btn;
+        private DashboardForm dashboardForm1;
+        private ShopForm shopForm1;
+        private InventoryForm inventoryForm1;
+        private CategoryForm categoryForm1;
+        private CustomersForm customersForm1;
     }
 }

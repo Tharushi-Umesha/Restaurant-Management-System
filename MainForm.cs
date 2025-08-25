@@ -37,5 +37,50 @@ namespace RestaurantManagementSystem
                 this.Hide();
             }
         }
+
+        private void dashboard_btn_Click(object sender, EventArgs e)
+        {
+            dashboardForm1.Visible = true;
+            shopForm1.Visible = false;
+            inventoryForm1.Visible = false;
+            categoryForm1.Visible = false;
+            customersForm1.Visible = false;
+        }
+
+        private void shop_btn_Click(object sender, EventArgs e)
+        {
+            dashboardForm1.Visible = false;
+            shopForm1.Visible = true;
+            inventoryForm1.Visible = false;
+            categoryForm1.Visible = false;
+            customersForm1.Visible = false;
+        }
+
+        private void inventory_btn_Click(object sender, EventArgs e)
+        {
+            dashboardForm1.Visible = false;
+            shopForm1.Visible = false;
+            inventoryForm1.Visible = true;
+            categoryForm1.Visible = false;
+            customersForm1.Visible = false;
+        }
+
+        private void category_btn_Click(object sender, EventArgs e)
+        {
+            dashboardForm1.Visible = false;
+            shopForm1.Visible = false;
+            inventoryForm1.Visible = false;
+            categoryForm1.Visible = true;
+            customersForm1.Visible = false;
+        }
+
+        private void customers_btn_Click(object sender, EventArgs e)
+        {
+            dashboardForm1.Visible = false;
+            shopForm1.Visible = false;
+            inventoryForm1.Visible = false;
+            categoryForm1.Visible = false;
+            customersForm1.Visible = true;
+        }
     }
 }

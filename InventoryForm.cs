@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RestaurantManagementSystem
 {
-    public partial class DashboardForm : UserControl
+    public partial class InventoryForm : UserControl
     {
-        public DashboardForm()
+        public InventoryForm()
         {
             InitializeComponent();
         }

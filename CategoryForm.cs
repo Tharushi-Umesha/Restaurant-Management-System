@@ -107,5 +107,74 @@ namespace RestaurantManagementSystem
             }
 
         }
+
+        private void category_updateBtn_Click(object sender, EventArgs e)
+        {
+            if(getID == 0)
+            {
+                MessageBox.Show("Select the item first.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if(MessageBox.Show($"Are you sure you want to update this ID : {getID} ?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    using(SqlConnection conn = new SqlConnection(connection))
+                    {
+                        conn.Open();
+
+                        string updateData = "UPDATE category SET category =@category, status =@status WHERE id =@id";
+
+                        using(SqlCommand cmd =  new SqlCommand(updateData, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@id", getID);
+                            cmd.Parameters.AddWithValue("@category", category_category.Text.Trim());
+                            cmd.Parameters.AddWithValue("@status", category_status.SelectedItem.ToString());
+
+                            cmd.ExecuteNonQuery();
+                            clearFields();
+
+                            MessageBox.Show($"{getID} has been updated Successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                        conn.Close();
+                    }
+                }
+            }
+            displayCategoryList();
+        }
+
+        private void category_deleteBtn_Click(object sender, EventArgs e)
+        {
+            if (getID == 0)
+            {
+                MessageBox.Show("Select the item first.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (MessageBox.Show($"Are you sure you want to update this ID : {getID} ?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    using (SqlConnection conn = new SqlConnection(connection))
+                    {
+                        conn.Open();
+
+                        string updateData = "DELETE FROM category WHERE id =@id";
+
+                        using (SqlCommand cmd = new SqlCommand(updateData, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@id", getID);
+
+                            cmd.ExecuteNonQuery();
+                            clearFields();
+
+                            MessageBox.Show($"{getID} has been deleted Successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                        conn.Close();
+                    }
+                }
+            }
+            displayCategoryList();
+
+        }
     }
 }

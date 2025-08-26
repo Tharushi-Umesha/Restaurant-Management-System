@@ -52,6 +52,7 @@
     <Compile Include="CategoryForm.Designer.cs">
       <DependentUpon>CategoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="categoryList.cs" />
     <Compile Include="CustomersForm.cs">
       <SubType>UserControl</SubType>
     </Compile>

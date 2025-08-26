@@ -17,6 +17,7 @@ namespace RestaurantManagementSystem
         public CategoryForm()
         {
             InitializeComponent();
+            displayCategoryList();
         }
 
         private void category_addBtn_Click(object sender, EventArgs e)
@@ -63,6 +64,7 @@ namespace RestaurantManagementSystem
 
                                 MessageBox.Show("Category Added Successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 clearFields();
+                                displayCategoryList();
                             }
                         }
                     }
@@ -81,6 +83,29 @@ namespace RestaurantManagementSystem
         private void category_clearBtn_Click(object sender, EventArgs e)
         {
             clearFields();
+        }
+
+        public void displayCategoryList()
+        {
+            categoryList cData = new categoryList();
+            List<categoryList> listData = cData.categoryListData();
+
+            dataGridView1.DataSource = listData;
+        }
+
+        private int getID = 0;
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex != -1)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+                getID = (int)row.Cells[0].Value;
+                category_category.Text = row.Cells[1].Value.ToString();
+                category_status.Text = row.Cells[2].Value.ToString();
+            }
+
         }
     }
 }

@@ -78,6 +78,7 @@ namespace RestaurantManagementSystem
         {
             category_category.Clear();
             category_status.SelectedIndex = -1;
+            getID = 0;
         }
 
         private void category_clearBtn_Click(object sender, EventArgs e)

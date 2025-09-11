@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.inventory_deleteBtn = new System.Windows.Forms.Button();
+            this.inventory_clearBtn = new System.Windows.Forms.Button();
+            this.inventory_updateBtn = new System.Windows.Forms.Button();
+            this.inventory_addBtn = new System.Windows.Forms.Button();
             this.inventory_imgImportBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -48,10 +52,6 @@
             this.inventory_productID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.inventory_addBtn = new System.Windows.Forms.Button();
-            this.inventory_updateBtn = new System.Windows.Forms.Button();
-            this.inventory_deleteBtn = new System.Windows.Forms.Button();
-            this.inventory_clearBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -72,14 +72,14 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(52)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(52)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(12, 35);
@@ -125,6 +125,69 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1056, 312);
             this.panel2.TabIndex = 1;
+            // 
+            // inventory_deleteBtn
+            // 
+            this.inventory_deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(52)))), ((int)(((byte)(46)))));
+            this.inventory_deleteBtn.FlatAppearance.BorderSize = 0;
+            this.inventory_deleteBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(76)))), ((int)(((byte)(65)))));
+            this.inventory_deleteBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(76)))), ((int)(((byte)(65)))));
+            this.inventory_deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inventory_deleteBtn.ForeColor = System.Drawing.Color.White;
+            this.inventory_deleteBtn.Location = new System.Drawing.Point(594, 232);
+            this.inventory_deleteBtn.Name = "inventory_deleteBtn";
+            this.inventory_deleteBtn.Size = new System.Drawing.Size(117, 33);
+            this.inventory_deleteBtn.TabIndex = 16;
+            this.inventory_deleteBtn.Text = "DELETE";
+            this.inventory_deleteBtn.UseVisualStyleBackColor = false;
+            // 
+            // inventory_clearBtn
+            // 
+            this.inventory_clearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(52)))), ((int)(((byte)(46)))));
+            this.inventory_clearBtn.FlatAppearance.BorderSize = 0;
+            this.inventory_clearBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(76)))), ((int)(((byte)(65)))));
+            this.inventory_clearBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(76)))), ((int)(((byte)(65)))));
+            this.inventory_clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inventory_clearBtn.ForeColor = System.Drawing.Color.White;
+            this.inventory_clearBtn.Location = new System.Drawing.Point(433, 232);
+            this.inventory_clearBtn.Name = "inventory_clearBtn";
+            this.inventory_clearBtn.Size = new System.Drawing.Size(117, 33);
+            this.inventory_clearBtn.TabIndex = 15;
+            this.inventory_clearBtn.Text = "CLEAR";
+            this.inventory_clearBtn.UseVisualStyleBackColor = false;
+            this.inventory_clearBtn.Click += new System.EventHandler(this.inventory_clearBtn_Click);
+            // 
+            // inventory_updateBtn
+            // 
+            this.inventory_updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(52)))), ((int)(((byte)(46)))));
+            this.inventory_updateBtn.FlatAppearance.BorderSize = 0;
+            this.inventory_updateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(76)))), ((int)(((byte)(65)))));
+            this.inventory_updateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(76)))), ((int)(((byte)(65)))));
+            this.inventory_updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inventory_updateBtn.ForeColor = System.Drawing.Color.White;
+            this.inventory_updateBtn.Location = new System.Drawing.Point(222, 232);
+            this.inventory_updateBtn.Name = "inventory_updateBtn";
+            this.inventory_updateBtn.Size = new System.Drawing.Size(117, 33);
+            this.inventory_updateBtn.TabIndex = 14;
+            this.inventory_updateBtn.Text = "UPDATE";
+            this.inventory_updateBtn.UseVisualStyleBackColor = false;
+            this.inventory_updateBtn.Click += new System.EventHandler(this.inventory_updateBtn_Click);
+            // 
+            // inventory_addBtn
+            // 
+            this.inventory_addBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(52)))), ((int)(((byte)(46)))));
+            this.inventory_addBtn.FlatAppearance.BorderSize = 0;
+            this.inventory_addBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(76)))), ((int)(((byte)(65)))));
+            this.inventory_addBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(76)))), ((int)(((byte)(65)))));
+            this.inventory_addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inventory_addBtn.ForeColor = System.Drawing.Color.White;
+            this.inventory_addBtn.Location = new System.Drawing.Point(61, 232);
+            this.inventory_addBtn.Name = "inventory_addBtn";
+            this.inventory_addBtn.Size = new System.Drawing.Size(117, 33);
+            this.inventory_addBtn.TabIndex = 13;
+            this.inventory_addBtn.Text = "ADD";
+            this.inventory_addBtn.UseVisualStyleBackColor = false;
+            this.inventory_addBtn.Click += new System.EventHandler(this.inventory_addBtn_Click);
             // 
             // inventory_imgImportBtn
             // 
@@ -272,67 +335,6 @@
             this.label1.Size = new System.Drawing.Size(82, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Product ID:";
-            // 
-            // inventory_addBtn
-            // 
-            this.inventory_addBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(52)))), ((int)(((byte)(46)))));
-            this.inventory_addBtn.FlatAppearance.BorderSize = 0;
-            this.inventory_addBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(76)))), ((int)(((byte)(65)))));
-            this.inventory_addBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(76)))), ((int)(((byte)(65)))));
-            this.inventory_addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inventory_addBtn.ForeColor = System.Drawing.Color.White;
-            this.inventory_addBtn.Location = new System.Drawing.Point(61, 232);
-            this.inventory_addBtn.Name = "inventory_addBtn";
-            this.inventory_addBtn.Size = new System.Drawing.Size(117, 33);
-            this.inventory_addBtn.TabIndex = 13;
-            this.inventory_addBtn.Text = "ADD";
-            this.inventory_addBtn.UseVisualStyleBackColor = false;
-            // 
-            // inventory_updateBtn
-            // 
-            this.inventory_updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(52)))), ((int)(((byte)(46)))));
-            this.inventory_updateBtn.FlatAppearance.BorderSize = 0;
-            this.inventory_updateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(76)))), ((int)(((byte)(65)))));
-            this.inventory_updateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(76)))), ((int)(((byte)(65)))));
-            this.inventory_updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inventory_updateBtn.ForeColor = System.Drawing.Color.White;
-            this.inventory_updateBtn.Location = new System.Drawing.Point(222, 232);
-            this.inventory_updateBtn.Name = "inventory_updateBtn";
-            this.inventory_updateBtn.Size = new System.Drawing.Size(117, 33);
-            this.inventory_updateBtn.TabIndex = 14;
-            this.inventory_updateBtn.Text = "UPDATE";
-            this.inventory_updateBtn.UseVisualStyleBackColor = false;
-            this.inventory_updateBtn.Click += new System.EventHandler(this.inventory_updateBtn_Click);
-            // 
-            // inventory_deleteBtn
-            // 
-            this.inventory_deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(52)))), ((int)(((byte)(46)))));
-            this.inventory_deleteBtn.FlatAppearance.BorderSize = 0;
-            this.inventory_deleteBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(76)))), ((int)(((byte)(65)))));
-            this.inventory_deleteBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(76)))), ((int)(((byte)(65)))));
-            this.inventory_deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inventory_deleteBtn.ForeColor = System.Drawing.Color.White;
-            this.inventory_deleteBtn.Location = new System.Drawing.Point(594, 232);
-            this.inventory_deleteBtn.Name = "inventory_deleteBtn";
-            this.inventory_deleteBtn.Size = new System.Drawing.Size(117, 33);
-            this.inventory_deleteBtn.TabIndex = 16;
-            this.inventory_deleteBtn.Text = "DELETE";
-            this.inventory_deleteBtn.UseVisualStyleBackColor = false;
-            // 
-            // inventory_clearBtn
-            // 
-            this.inventory_clearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(52)))), ((int)(((byte)(46)))));
-            this.inventory_clearBtn.FlatAppearance.BorderSize = 0;
-            this.inventory_clearBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(76)))), ((int)(((byte)(65)))));
-            this.inventory_clearBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(76)))), ((int)(((byte)(65)))));
-            this.inventory_clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inventory_clearBtn.ForeColor = System.Drawing.Color.White;
-            this.inventory_clearBtn.Location = new System.Drawing.Point(433, 232);
-            this.inventory_clearBtn.Name = "inventory_clearBtn";
-            this.inventory_clearBtn.Size = new System.Drawing.Size(117, 33);
-            this.inventory_clearBtn.TabIndex = 15;
-            this.inventory_clearBtn.Text = "CLEAR";
-            this.inventory_clearBtn.UseVisualStyleBackColor = false;
             // 
             // InventoryForm
             // 
